@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="canvas1"></canvas>
+    <script src="script.js"></script>
+
+    <label id="minutes">00</label>
+<label id="colon">:</label>
+<label id="seconds">00</label>
+    <script type="text/javascript">
+        var minutesLabel = document.getElementById("minutes");
+        var secondsLabel = document.getElementById("seconds");
+        var totalSeconds = 0;
+        setInterval(setTime, 1000);
+
+        function setTime()
+        {
+            ++totalSeconds;
+            secondsLabel.innerHTML = pad(totalSeconds%60);
+            minutesLabel.innerHTML = pad(parseInt(totalSeconds/60));
+        }
+
+        function pad(val)
+        {
+            var valString = val + "";
+            if(valString.length < 2)
+            {
+                return "0" + valString;
+            }
+            else
+            {
+                return valString;
+            }
+        }
+    </script>
+    <script> 
+     
+          
+	 init();
+	 
+	 knight.x = 200;
+	 knight.y = 300;
+	 knight.speed = 10;
+
+     characterSprite.src = "assets/knight.png";
+     background.src = "assets/sand.png";
+	
+
+	 
+	function move(){ 	  
+     if (keys[upArrow] && knight.y > 80) {
+         knight.y -= knight.speed;
+     }
+     if (keys[leftArrow] && knight.x > 0) {
+         knight.x -= knight.speed;
+
+     }
+     if (keys[downArrow] && knight.y < canvas.height - knight.height) {
+         knight.y += knight.speed;
+
+     }
+     if (keys[rightArrow] && knight.x < canvas.width - knight.width) {
+         knight.x += knight.speed;
+     }	 
+
+
+}
+
+    </script>
+
+    </body>
+</html>

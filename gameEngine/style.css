@@ -1,0 +1,20 @@
+ canvas {
+    background: black;
+     width: 1000px;
+     height: 650px;
+     border: 10px solid black;
+     position: absolute;
+     transform: translate(-50%, -50%);
+     top: 50%;
+     left: 50%;
+ }
+
+ #seconds {
+    font-size: 5em;}
+  
+  #minutes {
+    font-size: 5em;
+  }
+  #colon {
+    font-size: 5em;
+  }
